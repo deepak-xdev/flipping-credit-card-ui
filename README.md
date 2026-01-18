@@ -7,7 +7,6 @@ pure HTML and CSS. The card flips on hover to show front and back sides.
 - Card flip animation using CSS transform
 - Front and back card design
 - Smooth transition effects
-- Responsive layout (works on mobile and desktop)
 - No JavaScript used
 
 ## Technologies Used
