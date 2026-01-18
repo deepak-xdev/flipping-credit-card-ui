@@ -1,0 +1,187 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.circle1{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    z-index: -1;
+    background: linear-gradient(90deg,#b318ce,#f3f3f3);
+}
+.circle2{
+    position: absolute;
+    bottom: 17%;
+    right: 30%;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    z-index: -1;
+    background: linear-gradient(90deg,#b318ce,#f3f3f3);
+}
+.container{
+    position: relative;
+    z-index: 10;
+    height: 200px;
+    width: 400px;
+    perspective: 1000px;
+}
+.card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+.container:hover .card {
+    transform: rotateY(180deg);
+}
+.front-side{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+   backdrop-filter: blur(25px);
+    border-radius: 25px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+.master{
+    position: relative;
+    top: -35px;
+    left: 80px;
+    font-weight: 500;
+}
+.logo{
+   position: relative;
+   top: 15px;
+   left: 15px;
+    height: 60px;
+    width: 60px;
+    background-size: contain;
+    background-image: url(mastercard\ logo.png);
+    background-repeat: no-repeat;
+}
+.chip{
+  position: relative;
+  top: -60px;
+  left: 340px;
+    height: 40px;
+    width: 40px;
+    background-image: url(chip.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.card-no{
+position: relative;
+top: -35px;
+left: 30px;
+font-size: 0.75rem;
+font-weight: 400;
+}
+.card-no p{
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+span{
+    position: relative;
+    left: 30px;
+    bottom: 15px;
+}
+.expiry{
+    position: relative;
+    left: 330px;
+    bottom: 50px;
+    font-size: 0.55rem;
+}
+.expiry p{
+    font-size: 1.05rem;
+    font-weight: 400;
+}
+.back-side{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+   backdrop-filter: blur(25px);
+    border-radius: 25px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+.back-side h6{
+    position: relative;
+    top: 10px;
+    left: 25px;
+    font-weight: 500;
+    color: white;
+    font-size: 0.6rem;
+    padding-right: 30px;
+}
+.black-strip{
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    height: 45px;
+    width: 100%;
+    background-color: black;
+}
+.white-strip{
+    position: relative;
+    top: 85px;
+    left: 20px;
+    height: 40px;
+    width: 75%;
+    background-color: white;
+    border-radius: 6px;
+    border: 2px solid white;
+    background: repeating-linear-gradient(#fff,#fff 3px, #efefef 3px, #efefef 9px);
+}
+.cvv{
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    left: 315px;
+    height: 30px;
+    width: 40px;
+    background-color: white;
+    border-radius: 4px;
+}
+h5{
+    font-weight: 300;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    position: relative;
+    top: 70px;
+    font-size: 8px;
+}
